@@ -68,16 +68,17 @@ int main(){
 //QUESTÃO 05
 
 /*#include <stdio.h>
-#include <math.h>
 
 int main(){
 
-    int n, exp, potencia;
+    int n, exp, result=1;
     scanf("%i", &n);
     scanf("%i", &exp);
 
-    potencia = pow(n, exp);
-    printf("%i", potencia);
+    for(int i=1; i<=exp; i++){
+        result=result*n;
+    }
+    printf("%i", result);
 
     return 0;
 }*/
@@ -103,7 +104,6 @@ int main(){
 //QUESTÃO 07
 
 #include <stdio.h>
-#include <math.h>
 
 int main(){
 
@@ -111,8 +111,11 @@ int main(){
     scanf("%i", &n);
 
     for(int i=1; i<=n; i++){
-        cont=cont+pow(2,i);
-        //printf("%i\n", cont);
+        int var=1;
+        for(int j=1; j<=i; j++){
+            var=var*2;
+        }
+        cont=cont+var;
     }
     printf("%i", cont);
 
